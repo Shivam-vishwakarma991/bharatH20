@@ -5,7 +5,7 @@ import { Droplets, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import logo from "../app/public/Logo.png"
+
 interface HeaderProps {
   onGetStarted: () => void;
 }
@@ -70,7 +70,7 @@ export default function Header({ onGetStarted }: HeaderProps) {
   {/* Logo */}
   <div className="relative h-10 w-[140px]">
     <Image
-      src={logo}
+      src="/Logo.png"
       alt="Bharat H2O"
       fill
       className={`object-contain transition-all ${

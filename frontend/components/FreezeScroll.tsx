@@ -81,24 +81,64 @@ export default function FreezeScroll() {
 
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&q=80',
-      title: 'Restaurant Excellence',
-      desc: 'Premium dining experiences with custom-branded water'
+      url: '/product1.jpeg',
+      title: 'Premium Water Bottles',
+      desc: 'Custom-branded bottles for restaurants and cafés'
     },
     {
-      url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80',
-      title: 'Café Culture',
-      desc: 'Artisan coffee moments elevated with branded bottles'
+      url: '/product2.jpeg',
+      title: 'Elegant Design',
+      desc: 'Sophisticated branding that reflects your identity'
     },
     {
-      url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80',
-      title: 'Hotel Luxury',
-      desc: 'Five-star hospitality with premium water solutions'
+      url: '/product3.jpeg',
+      title: 'Quality Assured',
+      desc: 'Food-grade materials for safe, premium hydration'
     },
     {
-      url: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1200&q=80',
-      title: 'Custom Branding',
-      desc: 'Your unique identity on every bottle'
+      url: '/product4.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product5.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product6.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product7.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product8.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product9.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product10.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product11.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
+    },
+    {
+      url: '/product12.jpeg',
+      title: 'Your Brand, Our Bottles',
+      desc: 'Complete customization from labels to packaging'
     },
   ];
 
@@ -139,9 +179,9 @@ export default function FreezeScroll() {
               </div>
 
               {/* Card number indicator */}
-              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-white/10 backdrop-blur-md rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+              {/* <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-white/10 backdrop-blur-md rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                 <span className="text-white font-bold text-sm sm:text-base">{i + 1}</span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
