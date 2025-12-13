@@ -37,25 +37,25 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" ref={ref} className="py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section id="how-it-works" ref={ref} className="py-16 sm:py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000" />
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-4"
         >
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
             Our Process
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
             How It Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             From the first conversation to the final delivery, we've streamlined every step
             to make your experience effortless and enjoyable.
           </p>
@@ -65,7 +65,7 @@ export default function HowItWorks() {
           {/* Connecting line */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-200 transform -translate-y-1/2" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10 px-4">
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
@@ -74,7 +74,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100 h-full">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100 h-full">
                   {/* Icon with gradient background */}
                   <div className="mb-6 relative">
                     <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto transform hover:scale-110 transition-transform duration-300`}>
@@ -86,10 +86,10 @@ export default function HowItWorks() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -131,7 +131,7 @@ export default function HowItWorks() {
               <span className="font-bold">Average timeline:</span> From consultation to delivery in 2-3 weeks
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

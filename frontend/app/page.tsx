@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Hero from '@/components/Hero';
-import AboutUs from '@/components/AboutUs';
+import Header from '@/components/Header';
+import HeroGSAP from '@/components/HeroGSAP';
+import AboutUsGSAP from '@/components/AboutUsGSAP';
+import FreezeScroll from '@/components/FreezeScroll';
 import HowItWorks from '@/components/HowItWorks';
 import ProductRange from '@/components/ProductRange';
 import Testimonials from '@/components/Testimonials';
@@ -16,8 +18,10 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <Hero onGetStarted={() => setIsModalOpen(true)} />
-      <AboutUs />
+      <Header onGetStarted={() => setIsModalOpen(true)} />
+      <HeroGSAP onGetStarted={() => setIsModalOpen(true)} />
+      <FreezeScroll />
+      <AboutUsGSAP />
       <HowItWorks />
       <ProductRange />
       <Testimonials />

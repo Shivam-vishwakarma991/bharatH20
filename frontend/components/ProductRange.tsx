@@ -49,37 +49,37 @@ export default function ProductRange() {
   ];
 
   return (
-    <section id="products" ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section id="products" ref={ref} className="py-16 sm:py-24 bg-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-4"
         >
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
             Product Range
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-4 sm:mb-6">
             The Perfect Size for
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
               Every Occasion
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             From intimate café settings to grand hotel banquets, we offer a comprehensive
             range of bottle sizes to match your specific needs.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
           {products.map((product, index) => (
             <motion.div
               key={product.size}
@@ -96,7 +96,7 @@ export default function ProductRange() {
                 </div>
               )}
 
-              <div className={`relative bg-gradient-to-br ${product.color} rounded-3xl p-8 h-full text-white overflow-hidden ${product.popular ? 'ring-4 ring-amber-400 ring-offset-4' : ''} transform hover:scale-105 transition-all duration-300`}>
+              <div className={`relative bg-gradient-to-br ${product.color} rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-full text-white overflow-hidden ${product.popular ? 'ring-2 sm:ring-4 ring-amber-400 ring-offset-2 sm:ring-offset-4' : ''} transform hover:scale-105 transition-all duration-300`}>
                 {/* Background pattern */}
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=')] opacity-50" />

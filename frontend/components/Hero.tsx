@@ -125,17 +125,17 @@ export default function Hero({ onGetStarted }: HeroProps) {
               className="mt-12 flex items-center gap-8 justify-center lg:justify-start"
             >
               <div>
-                <div className="text-3xl font-bold text-blue-600">20+</div>
+                <div className="text-xl font-bold text-blue-600">20+</div>
                 <div className="text-sm text-gray-600">Active Partners</div>
               </div>
               <div className="h-12 w-px bg-gray-300" />
               <div>
-                <div className="text-3xl font-bold text-blue-600">200ml-1L</div>
+                <div className="text-xl font-bold text-blue-600">200ml-1L</div>
                 <div className="text-sm text-gray-600">Bottle Range</div>
               </div>
               <div className="h-12 w-px bg-gray-300" />
               <div>
-                <div className="text-3xl font-bold text-blue-600">100%</div>
+                <div className="text-xl font-bold text-blue-600">100%</div>
                 <div className="text-sm text-gray-600">Custom Design</div>
               </div>
             </motion.div>
