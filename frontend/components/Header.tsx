@@ -116,8 +116,8 @@ export default function Header({ onGetStarted }: HeaderProps) {
                 onClick={onGetStarted}
                 className={`${
                   isScrolled
-                    ? 'bg-blue-600 hover:bg-blue-700'
-                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                    ? 'bg-[#00A4DE] '
+                    : 'bg-white text-blue-600'
                 } shadow-lg`}
               >
                 Get Started

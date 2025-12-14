@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Droplets, ArrowRight, CheckCircle } from 'lucide-react';
+import { Droplets, ArrowRight, CheckCircle } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -28,17 +27,29 @@ export default function LeadCaptureModal({ isOpen, onClose }: LeadCaptureModalPr
     businessName: '',
     estimatedVolume: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setStep(3);
-    }, 1500);
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('businessName', formData.businessName);
+    formDataToSend.append('estimatedVolume', formData.estimatedVolume);
+
+    try {
+      const response = await fetch('https://getform.io/f/c69d69ae-3a62-436c-b763-27a51f60b9db', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      if (response.ok) {
+        setStep(3);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
   };
 
   const resetAndClose = () => {
@@ -227,11 +238,11 @@ export default function LeadCaptureModal({ isOpen, onClose }: LeadCaptureModalPr
                       </Button>
                       <Button
                         type="submit"
-                        disabled={isSubmitting || !formData.businessName}
+                        disabled={!formData.businessName}
                         className="flex-1 bg-blue-600 hover:bg-blue-700"
                         size="lg"
                       >
-                        {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+                        Get Free Quote
                       </Button>
                     </div>
                   </form>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import HeroGSAP from '@/components/HeroGSAP';
+import OurBrands from '@/components/OurBrands';
 import AboutUsGSAP from '@/components/AboutUsGSAP';
 import FreezeScroll from '@/components/FreezeScroll';
 import HowItWorks from '@/components/HowItWorks';
@@ -20,6 +21,7 @@ export default function Home() {
     <main className="relative">
       <Header onGetStarted={() => setIsModalOpen(true)} />
       <HeroGSAP onGetStarted={() => setIsModalOpen(true)} />
+      <OurBrands />
       <FreezeScroll />
       <AboutUsGSAP />
       <HowItWorks />

@@ -1,10 +1,12 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Droplets } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowRight, Droplets } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import bottles from "../app/public/bottles.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,10 +25,15 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
     const ctx = gsap.context(() => {
       // Title animation with split text effect
       if (titleRef.current) {
-        const titleChars = titleRef.current.textContent?.split('') || [];
+        const titleChars = titleRef.current.textContent?.split("") || [];
         titleRef.current.innerHTML = titleChars
-          .map((char) => `<span class="inline-block">${char === ' ' ? '&nbsp;' : char}</span>`)
-          .join('');
+          .map(
+            (char) =>
+              `<span class="inline-block">${
+                char === " " ? "&nbsp;" : char
+              }</span>`
+          )
+          .join("");
 
         gsap.from(titleRef.current.children, {
           opacity: 0,
@@ -34,7 +41,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
           rotateX: -90,
           stagger: 0.02,
           duration: 1,
-          ease: 'back.out(1.7)',
+          ease: "back.out(1.7)",
         });
       }
 
@@ -44,18 +51,18 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
         y: 30,
         duration: 1,
         delay: 0.5,
-        ease: 'power3.out',
+        ease: "power3.out",
       });
 
       // Image parallax and 3D effect
       if (imageRef.current) {
         gsap.to(imageRef.current, {
           yPercent: -30,
-          ease: 'none',
+          ease: "none",
           scrollTrigger: {
             trigger: heroRef.current,
-            start: 'top top',
-            end: 'bottom top',
+            start: "top top",
+            end: "bottom top",
             scrub: 1,
           },
         });
@@ -71,25 +78,27 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
             rotateY: x,
             rotateX: -y,
             duration: 0.5,
-            ease: 'power2.out',
+            ease: "power2.out",
           });
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
       }
 
       // Floating bottles animation
       if (bottlesRef.current) {
         const bottles = bottlesRef.current.children;
         Array.from(bottles).forEach((bottle, i) => {
-          gsap.to(bottle, {
-            y: -20,
-            duration: 2 + i * 0.3,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-            delay: i * 0.2,
+          gsap.to(imageRef.current, {
+            yPercent: -30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: "top top",
+              end: "+=350%",
+              scrub: 3, 
+            },
           });
 
           // Parallax on scroll
@@ -97,9 +106,9 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
             y: (i + 1) * 50,
             scrollTrigger: {
               trigger: heroRef.current,
-              start: 'top top',
-              end: 'bottom top',
-              scrub: true,
+              start: "top top",
+              end: "+=200%",
+              scrub: 3,
             },
           });
         });
@@ -120,7 +129,10 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
       </div>
 
       {/* Floating bottles in background */}
-      <div ref={bottlesRef} className="absolute inset-0 pointer-events-none hidden md:block">
+      <div
+        ref={bottlesRef}
+        className="absolute inset-0 pointer-events-none hidden md:block"
+      >
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
@@ -143,7 +155,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
               <Droplets className="w-4 h-4" />
-              <span>Trusted by 20+ Premium Establishments</span>
+              <span>Trusted by 100+ Premium Establishments</span>
             </div>
 
             <h1
@@ -157,8 +169,8 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
               ref={subtitleRef}
               className="text-lg sm:text-xl text-blue-50 mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Elevate your restaurant, café, or hotel with custom-branded water bottles.
-              We handle everything from design to delivery.
+              Elevate your restaurant, café, or hotel with custom-branded water
+              bottles. We handle everything from design to delivery.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -167,13 +179,17 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                 onClick={onGetStarted}
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg group shadow-xl hover:shadow-2xl transition-all"
               >
-                Get Started Today
+                Get a Quote
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("how-it-works")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm"
               >
                 Learn More
@@ -182,15 +198,21 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
 
             <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-xl sm:text-2xl font-bold text-white">20+</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">
+                  20+
+                </div>
                 <div className="text-xs sm:text-sm text-blue-100">Partners</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-xl sm:text-2xl font-bold text-white">200ml-1L</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">
+                  200ml-1L
+                </div>
                 <div className="text-xs sm:text-sm text-blue-100">Range</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-xl sm:text-2xl font-bold text-white">100%</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">
+                  100%
+                </div>
                 <div className="text-xs sm:text-sm text-blue-100">Custom</div>
               </div>
             </div>
@@ -201,7 +223,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
             <div
               ref={imageRef}
               className="relative h-[400px] sm:h-[500px] lg:h-[600px] perspective-1000"
-              style={{ transformStyle: 'preserve-3d' }}
+              style={{ transformStyle: "preserve-3d" }}
             >
               {/* Main bottle image with glass effect */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -216,7 +238,8 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                       alt="Bharat H2O Water Bottle"
                       className="w-full h-auto drop-shadow-2xl"
                       style={{
-                        filter: 'drop-shadow(0 25px 50px rgba(14, 165, 233, 0.4))',
+                        filter:
+                          "drop-shadow(0 25px 50px rgba(14, 165, 233, 0.4))",
                       }}
                     />
                   </div>
@@ -230,7 +253,9 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                         style={{
                           left: `${15 + i * 7}%`,
                           top: `${10 + (i % 5) * 18}%`,
-                          animation: `float ${2.5 + i * 0.4}s ease-in-out infinite`,
+                          animation: `float ${
+                            2.5 + i * 0.4
+                          }s ease-in-out infinite`,
                           animationDelay: `${i * 0.15}s`,
                         }}
                       />
@@ -244,7 +269,9 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                         key={i}
                         className="absolute inset-0 border-2 border-white/20 rounded-full"
                         style={{
-                          animation: `ping ${3 + i}s cubic-bezier(0, 0, 0.2, 1) infinite`,
+                          animation: `ping ${
+                            3 + i
+                          }s cubic-bezier(0, 0, 0.2, 1) infinite`,
                           animationDelay: `${i * 1}s`,
                         }}
                       />
@@ -263,7 +290,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
           <div
             className="w-1.5 h-1.5 bg-white rounded-full"
             style={{
-              animation: 'scroll 1.5s ease-in-out infinite',
+              animation: "scroll 1.5s ease-in-out infinite",
             }}
           />
         </div>
@@ -271,13 +298,26 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(180deg); }
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+          }
         }
         @keyframes scroll {
-          0% { transform: translateY(0); opacity: 0; }
-          50% { opacity: 1; }
-          100% { transform: translateY(16px); opacity: 0; }
+          0% {
+            transform: translateY(0);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(16px);
+            opacity: 0;
+          }
         }
         .perspective-1000 {
           perspective: 1000px;

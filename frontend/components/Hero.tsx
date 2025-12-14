@@ -68,7 +68,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium mb-6"
             >
               <Droplets className="w-4 h-4" />
-              <span>Trusted by 20+ Premium Establishments</span>
+              <span>Trusted by 100+ Premium Establishments</span>
             </motion.div>
 
             <motion.h1

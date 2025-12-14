@@ -126,10 +126,10 @@ export default function Testimonials() {
           className="mt-16 grid md:grid-cols-4 gap-8"
         >
           {[
-            { value: "20+", label: "Active Partners", sublabel: "Restaurants & Hotels" },
-            { value: "98%", label: "Client Satisfaction", sublabel: "Repeat orders" },
+            { value: "100+", label: "Active Partners", sublabel: "Restaurants & Hotels" },
+            { value: "100%", label: "Client Satisfaction", sublabel: "Repeat orders" },
             { value: "100K+", label: "Bottles Delivered", sublabel: "And counting" },
-            { value: "2-3", label: "Weeks Delivery", sublabel: "Average turnaround" }
+            { value: "1-2", label: "Days Delivery", sublabel: "Average turnaround" }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 leading-relaxed">
               Transforming hospitality with custom-branded water bottles.
-              Trusted by 20+ premium establishments across India.
+              Trusted by 100+ premium establishments across India.
             </p>
           </div>
 

@@ -27,7 +27,7 @@ export default function TrustBanner() {
     },
     {
       icon: Shield,
-      title: "Trusted by 20+",
+      title: "Trusted by 100+",
       description: "Leading establishments"
     },
     {
@@ -43,7 +43,7 @@ export default function TrustBanner() {
   ];
 
   return (
-    <section ref={ref} className="py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section ref={ref} className="py-6 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export default function TrustBanner() {
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
             <h3 className="text-center text-gray-900 font-bold text-lg mb-8">
-              Proud to Serve 20+ Premium Brands
+              Proud to Serve 100+ Premium Brands
             </h3>
 
             {/* Scrolling text animation */}

@@ -37,7 +37,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" ref={ref} className="py-16 sm:py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+    <section id="how-it-works" ref={ref} className="py-2 sm:py-5 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000" />
@@ -81,9 +81,9 @@ export default function HowItWorks() {
                       <step.icon className="w-10 h-10 text-white" />
                     </div>
                     {/* Step number badge */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    {/* <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {index + 1}
-                    </div>
+                    </div> */}
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">

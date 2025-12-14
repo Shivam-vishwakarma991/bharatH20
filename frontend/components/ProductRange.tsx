@@ -11,7 +11,7 @@ export default function ProductRange() {
 
   const products = [
     {
-      size: "200ml",
+      size: "250ml",
       icon: Coffee,
       name: "Café Companion",
       description: "Perfect for coffee shops and quick-service restaurants. Compact and elegant.",

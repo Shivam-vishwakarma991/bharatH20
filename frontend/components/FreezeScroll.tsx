@@ -54,8 +54,8 @@ export default function FreezeScroll() {
         if (!isLast) {
           // Push the current card up and fade it out
           tl.to(card, {
-            y: -150,
-            scale: 0.95,
+            y: -100,
+            scale: 0.5,
             opacity: 0,
             rotateX: -5,
             duration: 0.5,
@@ -177,33 +177,12 @@ export default function FreezeScroll() {
                   {image.desc}
                 </p>
               </div>
-
-              {/* Card number indicator */}
-              {/* <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-white/10 backdrop-blur-md rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                <span className="text-white font-bold text-sm sm:text-base">{i + 1}</span>
-              </div> */}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Scroll hint */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm hidden md:block">
-        <div className="flex flex-col items-center gap-2">
-          <span>Scroll to explore</span>
-          <svg
-            className="w-6 h-6 animate-bounce"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-        </div>
-      </div> */}
+
     </section>
   );
 }
