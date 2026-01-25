@@ -67,23 +67,24 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+919876543210" className="hover:text-blue-400 transition-colors">
-                    +91 98765 43210
+                  <a href="tel:+917898595612" className="hover:text-blue-400 transition-colors">
+                    +91 7898595612
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="mailto:hello@bharath2o.com" className="hover:text-blue-400 transition-colors">
-                    hello@bharath2o.com
+                  <a href="mailto:upadhyaysatyam86@gmail.com" className="hover:text-blue-400 transition-colors">
+                    upadhyaysatyam86@gmail.com
+
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  Mumbai, Maharashtra<br />India
+                 Kasturba Nagar, Bhopal, Madhya Pradesh, India<br />
                 </div>
               </li>
             </ul>

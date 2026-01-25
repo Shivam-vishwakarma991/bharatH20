@@ -44,20 +44,20 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91 98765 43210",
-      link: "tel:+919876543210"
+      content: "+917898595612",
+      link: "tel:+917898595612"
     },
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@bharath2o.com",
-      link: "mailto:hello@bharath2o.com"
+      content: "upadhyaysatyam86@gmail.com",
+      link: "mailto:upadhyaysatyam86@gmail.com"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "Mumbai, Maharashtra, India",
-      link: "#"
+      content: "Kasturba Nagar, Bhopal, Madhya Pradesh, India",
+      link: "https://maps.app.goo.gl/3RXS19pnhTt48YfX8"
     }
   ];
 
