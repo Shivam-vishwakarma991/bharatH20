@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Phone, MessageCircle, Droplets, ShieldCheck, Zap } from 'lucide-react';
 
-export default function HeroGSAP() {
+interface HeroProps {
+  onGetStarted: () => void;
+}
+
+export default function HeroGSAP({ onGetStarted }: HeroProps) {
   const containerRef = useRef(null);
 
   // WhatsApp number & message
