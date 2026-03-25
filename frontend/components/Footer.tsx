@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-6">Our Products</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">200ml Bottles</li>
+              <li className="text-gray-400">250ml Bottles</li>
               <li className="text-gray-400">500ml Bottles</li>
               <li className="text-gray-400">1 litre Bottles</li>
               <li className="text-gray-400">20 litre Jars</li>

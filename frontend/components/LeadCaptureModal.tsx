@@ -13,6 +13,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
+import { sendEmail } from '@/lib/actions';
+
 interface LeadCaptureModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -39,13 +41,12 @@ export default function LeadCaptureModal({ isOpen, onClose }: LeadCaptureModalPr
     formDataToSend.append('estimatedVolume', formData.estimatedVolume);
 
     try {
-      const response = await fetch('https://getform.io/f/sk_ZmQzNWRiOWItNDFhYy00MzY5LWFhOTEtMjRlMGFiNWMwNjE5', {
-        method: 'POST',
-        body: formDataToSend,
-      });
+      const result = await sendEmail(formDataToSend);
 
-      if (response.ok) {
+      if (result.success) {
         setStep(3);
+      } else {
+        alert('There was an error submitting your request. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);

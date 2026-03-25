@@ -9,6 +9,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
+import { sendEmail } from '@/lib/actions';
+
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -16,16 +18,14 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitStatus('idle');
     const form = e.currentTarget;
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://getform.io/f/sk_ZmQzNWRiOWItNDFhYy00MzY5LWFhOTEtMjRlMGFiNWMwNjE5', {
-        method: 'POST',
-        body: formData,
-      });
+      const result = await sendEmail(formData);
 
-      if (response.ok) {
+      if (result.success) {
         setSubmitStatus('success');
         form.reset();
         setTimeout(() => setSubmitStatus('idle'), 5000);
