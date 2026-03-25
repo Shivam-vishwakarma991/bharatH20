@@ -54,8 +54,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="text-gray-400">200ml Bottles</li>
               <li className="text-gray-400">500ml Bottles</li>
-              <li className="text-gray-400">1 Liter Bottles</li>
-              <li className="text-gray-400">20 Liter Jars</li>
+              <li className="text-gray-400">1 litre Bottles</li>
+              <li className="text-gray-400">20 litre Jars</li>
               <li className="text-gray-400">Custom Branding</li>
             </ul>
           </div>

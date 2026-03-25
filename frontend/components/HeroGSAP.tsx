@@ -182,7 +182,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                 Get a Quote
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 onClick={() =>
@@ -193,7 +193,7 @@ export default function HeroGSAP({ onGetStarted }: HeroProps) {
                 className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm"
               >
                 Learn More
-              </Button>
+              </Button> */}
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0">

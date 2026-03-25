@@ -95,7 +95,7 @@ export default function AboutUsGSAP() {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-16 sm:py-18 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -147,10 +147,7 @@ export default function AboutUsGSAP() {
               Our Mission
             </h3>
             <p className="text-lg sm:text-xl text-blue-50 max-w-3xl mx-auto leading-relaxed">
-              We're on a mission to empower hospitality businesses with affordable,
-              premium custom-branded water solutions. From our first pitch to the final
-              delivery, we're with you every step of the way—making the process seamless,
-              affordable, and impactful.
+            Our mission is to help restaurants, cafés, and hotels grow their brand with affordable custom-branded water bottles in India. We provide high-quality private label water solutions, ensuring a smooth process from design to delivery, so businesses can create a strong and lasting impression.
             </p>
           </div>
         </div>

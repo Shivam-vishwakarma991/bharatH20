@@ -29,7 +29,7 @@ export default function ProductRange() {
       popular: true
     },
     {
-      size: "1 Liter",
+      size: "1 litre",
       icon: Building2,
       name: "Executive Choice",
       description: "Ideal for hotels, banquet halls, and premium dining experiences.",
@@ -38,7 +38,7 @@ export default function ProductRange() {
       popular: false
     },
     {
-      size: "20 Liter",
+      size: "20 litre",
       icon: Waves,
       name: "Bulk Solution",
       description: "Large capacity jars for offices, event venues, and high-volume establishments.",

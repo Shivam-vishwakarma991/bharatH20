@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Droplets, Sparkles, Globe, Award } from 'lucide-react';
 import Image from 'next/image';
 import oneliter from "../app/public/h20oneliter.png"
-import liter from "../app/public/250ml.png"
+import litre from "../app/public/250ml.png"
 import jar from "../app/public/jar.png"
 
 
@@ -101,7 +101,7 @@ export default function OurBrands() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ">
         <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}
           <div ref={textRef} className="space-y-6 lg:space-y-8">
@@ -126,8 +126,8 @@ export default function OurBrands() {
 
             {/* Subheading */}
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-blue-100 leading-relaxed max-w-xl">
-              Building an <strong className="text-white">international brand</strong> from India.
-              Premium quality water that competes with global standards.
+            We are building more than just a water brand. Bharat H2O delivers premium quality packaged drinking water designed to meet global standards while helping businesses create a strong brand identity.
+
             </p>
 
             {/* Features grid */}
@@ -206,7 +206,7 @@ export default function OurBrands() {
                     {/* Image placeholder - Replace /brands/1liter.png with actual image */}
                     <Image
                       src={oneliter}
-                      alt="Bharat H2O 1 Liter Bottle"
+                      alt="Bharat H2O 1 litre Bottle"
                       className="w-full h-full object-contain z-10"
                       onError={(e) => {
                         // Fallback if image doesn't exist
@@ -219,7 +219,7 @@ export default function OurBrands() {
                     {/* Fallback content when image is not available */}
                     <div className="text-center z-10" style={{ display: 'none' }}>
                       <Droplets className="w-32 h-32 text-white mx-auto mb-4 drop-shadow-2xl" />
-                      <p className="text-white font-bold text-xl">1 Liter</p>
+                      <p className="text-white font-bold text-xl">1 litre</p>
                       {/* <p className="text-blue-200 text-sm mt-2">280 × 650px</p> */}
                       <p className="text-blue-300 text-xs mt-1">Premium Bottle</p>
                     </div>
@@ -234,7 +234,7 @@ export default function OurBrands() {
                 <div className="aspect-[1/2.5] bg-gradient-to-b from-cyan-200/20 to-blue-300/20 rounded-xl flex items-center justify-center overflow-hidden">
                   {/* Image placeholder - Replace /brands/250ml.png with actual image */}
                   <Image
-                    src={liter}
+                    src={litre}
                     alt="250ml Bottle"
                     className="w-full h-full object-contain"
                     onError={(e) => {
